@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashish - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a35aa41d24.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: rgb(74, 74, 179);
+      color: white;
+      font-family: "Poppins", sans-serif;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 50px;
+      background-color: rgb(22, 22, 114);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      list-style: none;
+      margin: 0 23px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+    }
+
+    nav ul li a:hover {
+      color: #a4a4f7;
+      font-size: 1.04rem;
+    }
+
+    main hr {
+      border: 0;
+      background: rgb(255, 164, 187);
+      height: 3px;
+      margin: 50px 127px;
+    }
+
+    .left {
+      font-size: 1.5rem;
+    }
+
+    .firstsection {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 150px 0;
+    }
+
+    .firstsection>div {
+      width: 30%;
+    }
+
+    .leftsection {
+      font-size: 3rem;
+    }
+
+    .leftsection .btn {
+      padding: 12px;
+      background-color: rgb(42 55 181);
+      color: white;
+      border: 2px solid white;
+      border-radius: 6px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background 0.5s,transform 0.5s;
+    }
+    .leftsection .btn:hover{
+      background: rgb(104, 13, 146);
+      
+      transform: translateY(-10px);
+    }
+
+    .leftsection .buttons a {
+      padding: 60px 3px;
+      text-decoration: none;
+    }
+
+    .rightsection img {
+      width: 100%;
+    }
+
+    .purple {
+      color: rgb(236, 18, 236);
+    }
+
+    .textgray {
+      color: rgb(80, 59, 59);
+    }
+
+    #element {
+      color: rgb(236, 18, 236);
+    }
+
+    .secondesection {
+      max-width: 80vw;
+      margin: auto;
+      height: 61vh;
+    }
+
+    .secondesection h1 {
+      font-size: 3rem;
+      color: rgb(36, 7, 65);
+      margin-bottom: 100px;
+      text-align: center;
+    }
+
+    .secondesection .box {
+      background: white;
+      width: 80vw;
+      height: 2px;
+      margin: 56px 0;
+      display: flex;
+    }
+
+    .secondesection .vertical {
+      height: 93px;
+      width: 3px;
+      background-color: white;
+      margin: 0 150px;
+    }
+
+    .image-top {
+      width: 50px;
+      position: relative;
+      top: -42px;
+      left: -9px;
+    }
+
+    .verticaltext {
+      position: relative;
+      top: 75px;
+      width: 150px;
+      color: black;
+      font-size: 18px;
+      font-weight: 1000;
+    }
+
+    .vertical-desc {
+      position: relative;
+      top: 86px;
+      color: rgb(255, 255, 255);
+      width: 250px;
+      font-size: 12px;
+    }
+
+    .thirdsection {
+      max-width: 80vw;
+      margin: auto;
+      height: 61vh;
+
+    }
+
+    .thirdsection h1 {
+      font-size: 3rem;
+      color: rgb(36, 7, 65);
+      margin-bottom: 100px;
+      text-align: center;
+    }
+
+    .thirdsection.content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 100px 0;
+    }
+
+    .thirdsection .leftsection {
+      font-size: large;
+      width: 60%;
+    }
+
+    .thirdsection .rightsection .img {
+      position: relative;
+      width: 100mm;
+      padding: 20px;
+      margin: -190px 1000px;
+    }
+
+    .fourthsection h1 {
+      font-size: 3rem;
+      color: rgb(36, 7, 65);
+      margin-bottom: 100px;
+      text-align: center;
+    }
+
+    .fourthsection .projectlist {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 40px;
+      margin-top: 50px;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .fourthsection .projectlist div{
+      background: #262626;
+      padding: 40px;
+      font-size: 13px;
+      font-weight: 300;
+      border-radius: 10px;
+      transition: background 0.5s,transform 0.5s;
+
+    } 
+    .fourthsection .projectlist i{
+      font-size: 50px;
+      margin-bottom: 30px;
+    }
+    .fourthsection .projectlist h2{
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+    .fourthsection .projectlist a{
+      text-decoration: none;
+      color: red;
+      font-size: 12px;
+      margin-top: 20px;
+      display: inline-block;
+    }
+    .fourthsection .projectlist div:hover{
+      background:#363069;
+      transform: translateY(-10px);
+    }
+    .fourthsection ul li a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .Fifthsection {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 150px 0;
+    }
+
+
+    .Fifthsection h1 {
+      font-size: 3rem;
+      color: rgb(36, 7, 65);
+
+    }
+
+    td {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    table .contactleft {
+      flex-basis: 75%;
+      font-size: 20px;
+    }
+
+    table .contactright {
+      flex-basis: 60%;
+      margin-left: 50px;
+    }
+
+    table .contactleft p {
+      margin-top: 30px;
+    }
+
+    table .contactleft p i {
+      color: red;
+      margin-right: 15px;
+      font-size: 20px;
+    }
+
+    table .contactleft .socialicon {
+      margin-top: 30px;
+    }
+
+    table .contactleft .socialicon a {
+      text-decoration: none;
+      font-size: 30px;
+      margin-right: 15px;
+      color: bisque;
+      display: inline-block;
+      transition: transform 0.5s;
+    }
+
+    table .contactleft .socialicon a:hover {
+      color: rgb(209, 129, 10);
+      transform: translateY(-5px);
+    }
+
+    table.contactright form {
+      width: 10 0%;
+
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      border: 0;
+      outline: none;
+      background: rgb(123, 185, 248);
+      padding: 15px;
+      margin: 10px;
+      color: #fff;
+      font-size: 18px;
+      border-radius: 6px;
+    }
+
+    table .contactright .btn {
+      padding: 8px;
+      background-color: rgb(55, 28, 151);
+      color: white;
+      border-radius: 6px;
+      margin-left: 10px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.5s,transform 0.5s;
+    }
+    table .contactright .btn:hover{
+      background: rgb(168, 18, 7);
+      
+      transform: translateY(-8px);
+    }
+
+    table .contactright .buttons a {
+      padding: 60px 3px;
+      text-decoration: none;
+    }
+
+    table .contactright #msg {
+      color: white;
+      display: block;
+    }
+
+    footer {
+      background-color: rgb(22, 22, 114);
+    }
+
+    .footer {
+      display: flex;
+      padding: 23px 123px;
+      justify-content: space-evenly;
+    }
+
+    .footer ul {
+      list-style: none;
+    }
+
+    .footer ul li a {
+      text-decoration: none;
+      color: white;
+      transition: background 0.5s,transform 0.5s;
+    }
+    .footer ul li a:hover{
+      background: rgb(21, 8, 70);
+      
+      transform: translateY(-10px);
+    }
+    .footer>div {
+      width: 223px;
+    }
+
+    footer .footerrights {
+      text-align: center;
+      color: rgb(141, 141, 141);
+      padding: 10 px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="left">Ashish's Portfolio</div>
+      <div class="right">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="firstsection">
+      <div class="leftsection">
+        Hello, My Name is <span class="purple">Ashish Gupta</span>
+        <div>
+          and I am a passionate
+          <span id="element"></span>
+          <div class="buttons">
+            <a href="https://drive.google.com/file/d/1kpK5RzfW4hvL0yu3c-q0-S2kY6t4xGqq/view?usp=sharing"
+              target="_blank">
+              <button class="btn">Download Resume</button>
+            </a>
+            <a href="https://github.com/ashishgupta-111" target="_blank">
+              <button class="btn">Visit Github</button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="rightsection"><img src="devimage.png" alt="" /></div>
+    </section>
+
+    <section class="thirdsection">
+      <h1 id="about">About Me</h1>
+      <div class="content">
+        <div class="leftsection">
+          <p>
+            I am a 20-year-old computer science student driven by passion, hard work, and a deep love for my field. With
+            a focus on web development and blockchain technology, I continuously seek opportunities to expand my skills
+            and knowledge. I take immense joy in creating captivating websites and exploring the innovative potential of
+            blockchain for secure transactions.
+          <div class="rightsection">
+            <img class="img" src="ashish.jpeg">
+          </div>
+          Through dedication, perseverance, and unwavering enthusiasm, I am committed to making a meaningful impact in
+          the world of computer science. I strive to push the boundaries of what is possible and contribute to the
+          advancement and success of this dynamic industry. With every project I undertake, I aim to deliver excellence
+          and demonstrate my dedication to continuous learning and growth. I am excited to embark on a journey of
+          exploration and discovery, leveraging my skills and passion to make a lasting impact in the field of computer
+          science.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="secondesection">
+      <h1 id="skills">Proficient in.</h1>
+      <div class="box">
+        <div class="vertical">
+          <img class="image-top" src="HTML.png" alt="not available" />
+          <div class="verticaltext">HTML-CSS</div>
+          <div class="vertical-desc">
+            With hands-on experience in HTML and CSS, I have successfully
+            developed visually captivating and responsive websites, applying
+            best practices for accessibility and performance.
+          </div>
+        </div>
+        <div class="vertical">
+          <img class="image-top" src="pcj.png" alt="not available" />
+          <div class="verticaltext">Languages</div>
+          <div class="verticaltext">(Python,C++,Javascript)</div>
+          <div class="vertical-desc">
+            I possess extensive experience in Python, C++, and JavaScript,
+            having successfully utilized these languages to develop various
+            projects and solve complex problems.
+          </div>
+        </div>
+        <div class="vertical">
+          <img class="image-top" src="reno.png" alt="not available" />
+          <div class="verticaltext">React-Node</div>
+          <div class="vertical-desc">
+            I have hands-on experience with React and Node, utilizing these
+            technologies to build dynamic and scalable web applications,
+            leveraging their capabilities to deliver efficient and interactive
+            user experiences.
+          </div>
+        </div>
+        <div class="vertical">
+          <img class="image-top" src="solidity.png" alt="not available" />
+          <div class="verticaltext">Solidity</div>
+          <div class="vertical-desc">
+            I have practical experience in Solidity, utilizing this language
+            to develop smart contracts and decentralized applications (DApps)
+            on blockchain platforms, demonstrating proficiency in creating
+            secure and reliable decentralized solutions.
+          </div>
+        </div>
+        <div class="vertical">
+          <img class="image-top" src="mysql.png" alt="not available" />
+          <div class="verticaltext">Database</div>
+          <div class="verticaltext">(MySql)</div>
+
+          <div class="vertical-desc">
+            I have hands-on experience with MySQL, utilizing it to design and
+            manage relational databases, demonstrating expertise in data
+            modeling, querying, and ensuring data integrity for various
+            projects.
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="fourthsection">
+      <div class="container">
+        <h1 id="project">Projects</h1>
+        <div class="projectlist">
+          <div>
+            <i class="fa fa-university"></i>
+            <h2>College Website Front End</h2>
+            <p>This is a frontend for the College website created using HTML, CSS, and JavaScript. Where I take an
+              example of random university i.e. Imperial Universite The website has been hosted online on 000webhostapp.
+            </p>
+            <a href="https://imperialuniversity.000webhostapp.com/index.html">Vist Website</a>
+          </div>
+          <div>
+            <i class="fa fa-music"></i>
+            <h2>Music Website Front End</h2>
+            <p>This is a frontend for the Music website created using HTML, CSS, and JavaScript. Where I create a login page a discover page and a front page for website  The website has been hosted online on 000webhostapp.
+            </p>
+            <a href="https://easylistner.000webhostapp.com/">Vist Website</a>
+          </div>
+          <div>
+            <i class="fa fa-chess"></i>
+            <h2>Chess Game</h2>
+            <p>This is a chess game with all functionality i made this using React, Html , CSS and Typescript,This game is not hosted but you can check this game on github.
+            </p>
+            <a href="https://github.com/ashishgupta-111">Check game on github</a>
+          </div>
+        </div>
+
+      </div>
+      </div>
+    </section>
+    <section class="Fifthsection">
+      <div id="contact">
+        <div id="container">
+          <div class="row">
+            <table>
+              <tr>
+                <td>
+                  <div class="contactleft">
+                    <h1 class="Contact" id="contact">Contact Me</h1>
+                    <p><i class="fa fa-paper-plane"></i>ashuguptaji59@gmail.com</p>
+                    <p><i class="fa fa-phone"></i>+91 8810448324</p>
+                    <div class="socialicon">
+                      <a href="https://www.instagram.com/ashish_gupta445/" target="_blank"><i
+                          class="fa fa-instagram"></i></a>
+                      <a href="https://twitter.com/ashishg53330056" target="_blank"><i class="fa fa-twitter"></i></a>
+                      <a href="https://github.com/ashishgupta-111" target="_blank"><i class="fa fa-github"></i></a>
+                      <a href="https://www.linkedin.com/in/ashish-gupta-96444b197/" target="_blank"><i
+                          class="fa fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="contactright">
+                    <form name="submit-to-google-sheet">
+                      <input type="text" name="Name" placeholder="Your Name" required>
+                      <input type="email" name="Email" placeholder="Your Email" required>
+                      <textarea name="Message" rows="5" placeholder="Your Message"></textarea>
+                      <button type="submit" class="btn">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer">
+      <div class="first">
+        <h3>Ashish's Developer Portfolio</h3>
+      </div>
+      <div class="seconde">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </div>
+      <div class="third">
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/ashish_gupta445/" target="_blank">Instagram</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/ashish-gupta-96444b197/" target="_blank">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://github.com/ashishgupta-111" target="_blank">Github</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/ashishg53330056" target="_blank">Twitter</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footerrights">
+      Copyright &copy; ashishguptaPortfolio.com | All rights reserved
+    </div>
+  </footer>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed("#element", {
+      strings: ["Web Developer.", "Blockchain Developer.", "App developer."],
+      typeSpeed: 50,
+    });
+  </script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby1flnVxrTQy6iUboxf4UfcPBzhrJndNqV6ywk8domNh_SH-UIoAViUxaRee2VBHqnG/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          msg.innerHTML = "Message Sent successfully"
+          setTimeout(function () {
+            msg.innerHTML = ""
+          }, 5000)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+
+</html>
